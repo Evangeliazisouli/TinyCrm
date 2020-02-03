@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TinyCrm.Model;
-using TinyCrm.Model.Options;
-
-namespace TinyCrm.Services
+﻿namespace TinyCrm.Core.Services
 {
     interface IProductService
     {
@@ -16,5 +8,18 @@ namespace TinyCrm.Services
 
         bool GetProductById(GetProductById product);
 
+    }
+
+    public class GetProductById
+    {
+    }
+
+    public class UpdateProductOptions
+    {
+    }
+
+    public class AddProductOptions
+    {
+       
     }
 }

@@ -1,11 +1,11 @@
-﻿namespace TinyCrm.Model
+﻿namespace TinyCrm.Core.Model
 {
     public class Custom
     {   /// <summary>
         /// 
        /// </summary>
         public int Id { get;set; }
-        /// <summary>
+        /// <summary
         /// 
         /// </summary>
         public string Phone { get; set; }

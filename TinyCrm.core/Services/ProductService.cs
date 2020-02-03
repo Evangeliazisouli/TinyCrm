@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TinyCrm.core;
+using TinyCrm.Core.Model;
 using TinyCrm.Model.Options;
-using TinyCrm.Model;
 
-namespace TinyCrm.Services
+namespace TinyCrm.Core.Services
 {
     public class ProductService : IProductService
     {
         private List<Product> ProductsList = new List<Product>();
         private string productid;
+        private object ProductList;
 
         public bool AddProduct(AddProductOptions options)
         {
@@ -39,7 +41,7 @@ namespace TinyCrm.Services
                 if (string.IsNullOrWhiteSpace(options.Name))
                 {
                     return false;
-                }
+                }te
                 if (options.Price <= 0)
                 {
                     return false;
@@ -50,7 +52,7 @@ namespace TinyCrm.Services
                     return false;
                 }
 
-                var product = new Product();
+                var Product = new Product();
 
                 
 
@@ -67,7 +69,7 @@ namespace TinyCrm.Services
 
         }
 
-        public bool UpdateProduct(string ProductId, UpdateProductOptions options)
+        public bool UpdateProduct(string ProductId, Model.Options.UpdateProductOptions options)
         {
             if (string.IsNullOrWhiteSpace(productid)) {
                 return false;
@@ -106,7 +108,7 @@ namespace TinyCrm.Services
             {
                 return false;
             }
-            var product = new Product();
+            var Product = new Product();
             product.Discount = options.Discount;
             product.Price = options.Price;
             product.Description = options.Description;
@@ -122,6 +124,16 @@ namespace TinyCrm.Services
             return ProductList
                 .SingleOrDefault(s => s.Id.Equals(id));
 
+        }
+
+        public bool UpdateProduct(UpdateProductOptions options)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetProductById(GetProductById product)
+        {
+            throw new NotImplementedException();
         }
     }
 }   

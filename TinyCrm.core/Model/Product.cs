@@ -1,32 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using TinyCrm.Core;
 
-namespace TinyCrm.Model
+namespace TinyCrm.core
 {
     public class Product
-    {   /// <summary>
-       /// 
-      /// </summary>
-        public string id { get;set; }
+    {          /// <summary>
+               /// 
+               /// </summary>
+        public string Id { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
-        public string Name { get;set;}
+        public string Name { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
-        public decimal  Price { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string Description { get; set; }
+        public decimal Price { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
         public decimal Discount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Description { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
